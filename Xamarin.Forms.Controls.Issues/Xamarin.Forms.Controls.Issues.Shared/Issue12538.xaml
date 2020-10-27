@@ -27,7 +27,14 @@
             BackgroundColor="Black"
             Text="If you can see three ellipses, the test has passed."/>
         <Ellipse Fill="#27ae61" />
+        <Ellipse>
+            <Ellipse.Fill>
+                <SolidColorBrush Color="#27ae61" />
+            </Ellipse.Fill>
+        </Ellipse>
+        <Label Text="Using a StaticResource" />
         <Ellipse Fill="{StaticResource StaticColor}" />
+        <Label Text="Using a DynamicResource" />
         <Ellipse Fill="{DynamicResource DynamicColor}" />
     </StackLayout>
 </controls:TestContentPage>
