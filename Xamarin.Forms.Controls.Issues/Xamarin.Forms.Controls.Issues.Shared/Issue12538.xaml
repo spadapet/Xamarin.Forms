@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<controls:TestContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:Xamarin.Forms.Controls"
+    x:Class="Xamarin.Forms.Controls.Issues.Issue12538"
+    Title="Issue 12538">
+    <controls:TestContentPage.Resources>
+        <ResourceDictionary>
+
+            <SolidColorBrush x:Key="StaticColor">#27ae61</SolidColorBrush>
+
+            <SolidColorBrush x:Key="DynamicColor">#27ae61</SolidColorBrush>
+
+            <Style TargetType="Ellipse">
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="HeightRequest" Value="60" />
+                <Setter Property="WidthRequest" Value="60" />
+            </Style>
+
+        </ResourceDictionary>
+    </controls:TestContentPage.Resources>
+    <StackLayout>
+        <Label
+            Padding="12"
+            TextColor="White"
+            BackgroundColor="Black"
+            Text="If you can see three ellipses, the test has passed."/>
+        <Ellipse Fill="#27ae61" />
+        <Ellipse Fill="{StaticResource StaticColor}" />
+        <Ellipse Fill="{DynamicResource DynamicColor}" />
+    </StackLayout>
+</controls:TestContentPage>
