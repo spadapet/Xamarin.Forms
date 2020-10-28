@@ -30,7 +30,7 @@ namespace Xamarin.Forms.Internals
 			var index = _names.Values.IndexOf(scopedObject);
 			if (index < 0)
 				return null;
-			return _names.Keys.Skip(index - 1).FirstOrDefault();
+			return _names.Keys.Skip(index).FirstOrDefault();
 		}
 
 		public static INameScope GetNameScope(BindableObject bindable) => (INameScope)bindable.GetValue(NameScopeProperty);
