@@ -9,13 +9,6 @@ namespace Xamarin.Forms.Platform.Android
 {
 	public static class BrushExtensions
 	{
-		static readonly int ApiLevel;
-
-		static BrushExtensions()
-		{
-			ApiLevel = (int)Forms.SdkInt;
-		}
-
 		public static void UpdateBackground(this AView view, Brush brush)
 		{
 			if (view == null)
@@ -191,13 +184,8 @@ namespace Xamarin.Forms.Platform.Android
 			if (!Forms.IsNougatOrNewer)
 				return false;
 
-			if (ApiLevel >= 24)
-			{
-				var colors = gradientDrawable.GetColors();
-				return colors != null && colors.Length > 1;
-			}
-
-			return false;
+			var colors = gradientDrawable.GetColors();
+			return colors != null && colors.Length > 1;
 		}
 
 		public static bool UseGradients(this GradientStrokeDrawable gradientDrawable)

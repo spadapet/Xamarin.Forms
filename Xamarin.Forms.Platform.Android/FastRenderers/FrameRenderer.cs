@@ -2,13 +2,10 @@ using System;
 using System.ComponentModel;
 using Android.Content;
 using Android.Graphics;
-using Android.Graphics.Drawables;
 using Android.Graphics.Drawables.Shapes;
 using Android.Views;
 using AndroidX.Core.View;
 using AndroidX.CardView.Widget;
-using AndroidX.CardView.Widget;
-using AndroidX.Core.View;
 using AColor = Android.Graphics.Color;
 using AView = Android.Views.View;
 

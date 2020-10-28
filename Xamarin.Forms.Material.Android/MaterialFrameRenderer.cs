@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.ComponentModel;
 using Android.Content;
 using Android.Graphics.Drawables;
@@ -7,8 +6,6 @@ using Android.Views;
 using AndroidX.Core.View;
 using Xamarin.Forms.Platform.Android;
 using Xamarin.Forms.Platform.Android.FastRenderers;
-using Xamarin.Forms.Platform.Android;
-using Android.Graphics.Drawables;
 using Android.Graphics.Drawables.Shapes;
 using AView = Android.Views.View;
 using MaterialCardView = Google.Android.Material.Card.MaterialCardView;
