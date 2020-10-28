@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Linq;
 
 namespace Xamarin.Forms.Internals
 {
@@ -21,6 +22,15 @@ namespace Xamarin.Forms.Internals
 				throw new ArgumentException($"An element with the key '{name}' already exists in NameScope", nameof(name));
 
 			_names[name] = scopedElement;
+		}
+
+		//used by VS Live Visual Tree
+		internal string NameOf(object scopedObject)
+		{
+			var index = _names.Values.IndexOf(scopedObject);
+			if (index < 0)
+				return null;
+			return _names.Keys.Skip(index - 1).FirstOrDefault();
 		}
 
 		public static INameScope GetNameScope(BindableObject bindable) => (INameScope)bindable.GetValue(NameScopeProperty);
