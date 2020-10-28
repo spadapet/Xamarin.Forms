@@ -65,7 +65,7 @@ namespace Xamarin.Forms.Platform.Android
 
 		protected override void UpdateBackground()
 		{
-		
+
 		}
 
 		void UpdateBoxView()
